@@ -1,0 +1,61 @@
+{
+  "name": "btc-forward-tracer",
+  "version": "1.0.0",
+  "description": "Bitcoin forward transaction tracer for NCB investigations",
+  "author": "Narcotics Control Bureau",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "concurrently -k -n VITE,ELECTRON -c cyan,yellow \"npm run vite\" \"npm run electron:dev\"",
+    "vite": "vite",
+    "electron:dev": "wait-on http://localhost:5173 && cross-env NODE_ENV=development electron .",
+    "start": "vite build && electron .",
+    "build": "vite build && CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --mac --arm64",
+    "preview": "vite preview"
+  },
+  "build": {
+    "appId": "gov.ncb.btctracer",
+    "productName": "BTC Tracer",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/main.js",
+      "src/preload.js",
+      "src/tracer.js",
+      "src/chain.js",
+      "renderer-dist/**/*",
+      "labels-sample.csv",
+      "package.json"
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["arm64"]
+        }
+      ],
+      "identity": null,
+      "category": "public.app-category.utilities",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false
+    },
+    "dmg": {
+      "artifactName": "BTC-Tracer-${arch}.dmg",
+      "title": "BTC Tracer"
+    }
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8",
+    "vite": "^6.0.7",
+    "wait-on": "^8.0.2"
+  },
+  "dependencies": {
+    "d3": "^7.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

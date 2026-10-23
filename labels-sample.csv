@@ -1,0 +1,12 @@
+address,label,category
+1NDyJtNTjmwk5xPNhjgAMu4HDHigtobu1s,Binance Hot Wallet,exchange
+3E35SFZkfLMGo4qX5aVs1bBDSnAuGgBTs,Coinbase Cold,exchange
+bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh,Kraken Deposit,exchange
+bc1q9d3xa5gg45q2d9hhlkkm8e6dplc9uzpvgcjzln,OKX Hot,exchange
+3Nxwenay9Z8Lc9JBiywExpnEFiLp6Afp8v,BitFinex Cold,exchange
+1FzWLkAahHooV3kzTgyx6qsswXJ6sCXkgs,Huobi Hot,exchange
+3P3QsMVK89JBI7RYPQ6mFerKHsNrNmTNEq,Bitmex Hot,exchange
+1A1zP1eP5QGefi2DMPTfTL5SLmv7Divfna,Genesis Block,historical
+bc1qnsa4yspep3dsjm5l9q34gdjnvl4lz0wnfhq3ug,Wasabi Coinjoin,mixer
+3NWPMqbMFqHqXCMNDqBkKpKFQPXM3PNRSH,Wasabi Coinjoin 2,mixer
+bc1qf3em5qzdkhhsktx3re0fkk6fkl4qfpspwrxcq,JoinMarket,mixer

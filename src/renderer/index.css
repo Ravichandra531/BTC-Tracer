@@ -1,0 +1,53 @@
+/* ── Reset & tokens ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:         #07090f;
+  --surface:    #0c1220;
+  --card:       #101828;
+  --elevated:   #131f32;
+  --border:     rgba(255,255,255,0.07);
+  --border2:    rgba(255,255,255,0.13);
+
+  --amber:      #f59e0b;
+  --amber-dim:  rgba(245,158,11,0.12);
+  --blue:       #3b82f6;
+  --blue-dim:   rgba(59,130,246,0.13);
+  --green:      #22c55e;
+  --green-dim:  rgba(34,197,94,0.13);
+  --red:        #ef4444;
+  --red-dim:    rgba(239,68,68,0.13);
+  --purple:     #a855f7;
+
+  --tx:    #3b82f6;     /* transaction node */
+  --addr:  #22c55e;     /* address node */
+  --exch:  #f59e0b;     /* exchange node */
+  --unsp:  #a855f7;     /* unspent node */
+
+  --text:  #e2eaff;
+  --muted: #4a5878;
+  --sub:   #8899bb;
+  --mono:  #7dd3fc;
+
+  --r:   8px;
+  --r2: 12px;
+  --r3: 16px;
+  --font: 'Inter', system-ui, sans-serif;
+  --mono-font: 'JetBrains Mono', monospace;
+}
+
+html, body, #root {
+  height: 100%; width: 100%; overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+input, textarea, select { font-family: var(--font); }
+button { font-family: var(--font); cursor: pointer; }
+::selection { background: rgba(245,158,11,0.25); }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 99px; }

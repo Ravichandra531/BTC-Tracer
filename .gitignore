@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+release/
+renderer-dist/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Environment secrets
+.env
+.env.*
+!.env.example
